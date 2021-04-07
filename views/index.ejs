@@ -1,3 +1,10 @@
 Middle
 
-(fdfdsf)
+<% books.forEach(book => { %>
+    <div>
+        <%= book.title %>, <%= book.publishDate %> 
+    </div>
+    <div>
+        <img height="150" width="100" src="<%= book.coverImagePath %>  ">
+    </div>
+<% }) %>

@@ -1,0 +1,12 @@
+<h2>name: <%= author.name %> </h2>
+<a href="/authors/<%= author.id %>/edit ">Edit</a>
+<%- include ('../partials/deleteForm', {url: `/authors/${author.id}`}) %> 
+
+
+<% if (booksByAuthor.length > 0) { %>
+    <h2>Books by author</h2>
+    <% for (book of booksByAuthor) { %>
+        <p>book.title: <%= book.title %> </p>
+        <img height="150" width="100" src="<%= book.coverImagePath %>  ">
+    <% } %>
+<% } %>

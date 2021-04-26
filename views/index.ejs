@@ -1,10 +1,12 @@
 Middle
 
 <% books.forEach(book => { %>
-    <div>
-        <%= book.title %>, <%= book.publishDate %> 
-    </div>
-    <div>
-        <img height="150" width="100" src="<%= book.coverImagePath %>  ">
-    </div>
+    <a href="/books/<%= book.id %> ">
+        <div>
+            <%= book.title %>, <%= book.publishDate %> 
+        </div>
+        <div>
+            <img height="150" width="100" src="<%= book.coverImagePath %>  ">
+        </div>
+    </a>
 <% }) %>

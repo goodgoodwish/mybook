@@ -23,7 +23,9 @@
             <%= book.title %>, <%= book.publishDate %> 
         </div>
         <div>
-            <img height="150" width="100" src="<%= book.coverImagePath %>  ">
+            <a href="/books/<%= book.id %> ">
+                <img height="150" width="100" src="<%= book.coverImagePath %>  ">
+            </a>
         </div>
     <% }) %>
 </div>
